@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+
+<div class="header">
+  <h2>On the way</h2>
+  <h3>Shopping mall to purchace your needs</h3>
+
+<nav class="navbar">
+  <ul class="nav-links">
+      <li class="nav-item">
+          <a href="E:\online Shopping web design\OntheWay.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+          <a href="E:\online Shopping web design\about.html" class="nav-link">About</a>
+      </li>
+      <li class="nav-item">
+          <a href="E:\online Shopping web design\contact.html" class="nav-link">Contact</a>
+      </li>
+  </ul>
+</nav>
+</div>
+
+
+  <div class="container">
+    <!-- heading text -->
+    <ul class="image-gallery">
+      <li>
+        <img src="cloth1.jpeg" alt="MDN logo">
+       </li>
+       <li>
+        <img src="cloth2.jpeg" alt="MDN logo">
+       </li>
+       <li>
+        <img src="cloth3.jpeg" alt="MDN logo">
+       </li>
+       <li>
+        <img src="cloth4.jpeg" alt="MDN logo">
+       </li>
+       <li>
+        <img src="cloths5.jpeg" alt="MDN logo">
+       </li>
+       <li>
+        <img src="cloth6.jpeg" alt="MDN logo">
+       </li>
+       <li>
+        <img src="cloths7.jpeg" alt="MDN logo">
+       </li>
+       <li>
+        <img src="cloths8.jpeg" alt="MDN logo">
+       </li>
+       <li>
+        <img src="cloths9.jpeg" alt="MDN logo">
+       </li>
+    </ul>
+  </div>
+
+<div class="footer">
+  <div>
+  <table id="table" style="width: 600px;">
+      <tr style="width: 40%">
+        <th>branch</th>
+        <th>Contact</th>
+        <th>location</th>
+        <button onclick="trans()">check availability</button>
+      </tr>
+      <tr style="width: 30%">
+        <td>wellawatte</td>
+        <td>021--------</td>
+        <td>--,wellawatte,colombo-6</td>
+        <td id="wellawatte"> </td>
+      </tr>
+      <tr style="width: 30%">
+        <td>dehiwala</td>
+        <td>021-------</td>
+        <td>--,dehiwale,colombo-5</td>
+        <td id="dehiwale"> </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<script>
+function trans() {
+  var table = document.getElementById("table");
+  var row = table.getElementsByTagName("tr")[2];
+  var td = row.getElementsByTagName("td")[3];
+  let currentDate = new Date();
+    // if current time is between 8a.m to 6.30pm dehiwala shop status will be opened--> UTC 3-13h
+  if (currentDate.getHours()>3 & currentDate.getHours()<13){
+    td.innerHTML = "opened";
+ }
+ else{
+  td.innerHTML = "closed";
+ }
+ var row = table.getElementsByTagName("tr")[1];
+  var td = row.getElementsByTagName("td")[3];
+  // if current time is between 8a.m to 4.30pm wellawate shop status will be opened--> UTC 3-11h
+  if (currentDate.getHours()>3 & currentDate.getHours()<11){
+    td.innerHTML = "opened";
+ }
+ else{
+  td.innerHTML = "closed";
+ }
+}
+
+</script>
+</body>
+</html>
+
+<!--Create a simple web page using HTML, CSS and JavaScript. 
+You may design a website for any requirement (personal website, the website for a shop, school or any place etc.) Your web design should include the below details. Please note these are minimum requirements, but you can feel free to be creative and do more work.
+5 images   2 remaining
+1 Simple animation  
+1 Simple JavaScript function  
+1 Ordered or Unordered List  ok
+1 Table with data   ok
+5 hyperlinks ok
+Responsive web page design  -->
+
